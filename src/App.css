@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0f19;
+  color: #ffffff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  height: 70px;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #202635;
+  background: #111622;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.balance span {
+  color: #8b93a7;
+  font-size: 13px;
+}
+
+.balance strong {
+  font-size: 18px;
+}
+
+/* Dashboard */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 70px);
+}
+
+/* Sidebar */
+
+.crypto-sidebar {
+  padding: 24px 16px;
+  border-right: 1px solid #202635;
+  background: #0f1420;
+}
+
+.crypto-sidebar h2 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #aab1c1;
+}
+
+.crypto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.crypto-item {
+  width: 100%;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  background: transparent;
+  color: white;
+
+  text-align: left;
+}
+
+.crypto-item:hover {
+  background: #171d2b;
+}
+
+.crypto-item.active {
+  background: #1a2130;
+  border-color: #34405a;
+}
+
+.crypto-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.crypto-item span {
+  color: #7f889c;
+  font-size: 12px;
+}
+
+.crypto-item > strong {
+  font-size: 13px;
+}
+
+/* Main */
+
+.main-content {
+  padding: 28px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.crypto-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.crypto-header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.crypto-header p {
+  color: #8b93a7;
+}
+
+.current-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Chart */
+
+.chart {
+  height: 420px;
+  border: 1px solid #202635;
+  border-radius: 12px;
+  background: #111622;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  text-align: center;
+  color: #697287;
+}
+
+.chart-placeholder span {
+  display: block;
+  color: #aab1c1;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+/* Trading */
+
+.trading-panel {
+  padding: 22px;
+  border: 1px solid #202635;
+  border-radius: 12px;
+  background: #111622;
+}
+
+.trading-panel h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.trading-panel label {
+  display: block;
+  margin-bottom: 8px;
+  color: #8b93a7;
+  font-size: 14px;
+}
+
+.trading-panel input {
+  width: 100%;
+  padding: 13px 14px;
+
+  border: 1px solid #30384b;
+  border-radius: 8px;
+
+  outline: none;
+  background: #0b0f19;
+  color: white;
+}
+
+.trading-panel input:focus {
+  border-color: #5d6b88;
+}
+
+.trade-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.trade-buttons button {
+  padding: 14px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+  font-weight: 700;
+}
+
+.long-button {
+  background: #16845b;
+}
+
+.long-button:hover {
+  background: #1b9b6b;
+}
+
+.short-button {
+  background: #c44752;
+}
+
+.short-button:hover {
+  background: #df5360;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .crypto-sidebar {
+    border-right: none;
+    border-bottom: 1px solid #202635;
+  }
+
+  .crypto-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .chart {
+    height: 320px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .crypto-list {
+    grid-template-columns: 1fr;
+  }
+
+  .crypto-header h1 {
+    font-size: 22px;
+  }
+
+  .current-price {
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 14px;
+  }
+}
