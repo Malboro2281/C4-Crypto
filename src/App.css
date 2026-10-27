@@ -305,3 +305,24 @@ button {
     padding: 14px;
   }
 }
+.chart-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: #12161c;
+  border: 1px solid #232a35;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.intervals { display: flex; gap: 6px; flex-shrink: 0; }
+.intervals button {
+  background: transparent;
+  color: #9aa4b2;
+  border: 1px solid #232a35;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.intervals button.active { background: #232a35; color: #fff; }
+ 
