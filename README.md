@@ -7,7 +7,7 @@ Funkcja tej strony polega na tym ze mozesz otworzyc pozycje long albo short i ja
 Rozszerzona wersja:
 - [ ] Przygotowanie projektu
 - [ ] Połączenie z API
-- [ ] Kryptowaluty
+- [x] Kryptowaluty
 - [ ] Wykres
 - [ ] System salda
 - [ ] Otwieranie pozycji
@@ -18,7 +18,7 @@ Rozszerzona wersja:
 - [ ] Walidacja
 - [ ] Testowanie
 - [ ] zmieniający się PnL
-- [ ] aktualna cena
-- [ ] wybór kryptowaluty
+- [x] aktualna cena
+- [x] wybór kryptowaluty
 - [ ] wpisywanie kwoty transakcji
 
